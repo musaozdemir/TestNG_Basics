@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="132" started-at="2020-09-08T19:34:01 EDT" finished-at="2020-09-08T19:34:01 EDT">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="132" started-at="2020-09-08T19:34:01 EDT" finished-at="2020-09-08T19:34:01 EDT">
+      <class name="com.syntax.class01.Task">
+        <test-method status="PASS" signature="number()[pri:0, instance:com.syntax.class01.Task@63e2203c]" name="number" duration-ms="11" started-at="2020-09-08T19:34:01 EDT" finished-at="2020-09-08T19:34:01 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- number -->
+      </class> <!-- com.syntax.class01.Task -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

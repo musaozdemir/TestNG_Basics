@@ -1,0 +1,37 @@
+package com.syntax.class03;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeMethod;
+
+public class Test {
+	
+	public static WebDriver driver;
+	@BeforeMethod
+	public void openBrowser() {
+		
+		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+
+		driver = new ChromeDriver();
+		driver.get("http://166.62.36.207/humanresources/symfony/web/index.php/auth/login");
+		driver.manage().window().maximize();
+		
+	}
+	
+	@org.testng.annotations.Test
+	public void validLogin() {
+		
+		driver.findElement(By.id("txtUsername")).sendKeys("Admin");
+		driver.findElement(By.id("txtPassword")).sendKeys("Hum@nhrm123");
+		driver.findElement(By.cssSelector("input#btnLogin")).click();
+		String welcomeText  = driver.findElement(By.id("welcome")).getText();
+		
+		if(welcomeText.contains("Admin")) {
+			System.out.println("Admin is logged in.test pass");
+		} else {
+			System.out.println("Admin is NOT logged in.test fail");
+		}
+	}
+
+}
